@@ -1,0 +1,181 @@
+:root {
+    /* BACKGROUNDS */
+    --background: #FAF6F1;
+    --background-secondary: #F2ECE5;
+
+    /* TEXT */
+    --text: #111419;
+    --text-secondary: #393939;
+    --text-highlight: #9A8D84;
+
+    /* BUTTONS */
+    --button-background: #101318;
+    --button-text: #FFFFFF;
+
+    /* BORDERS */
+    --border: #D9D0C8;
+
+    /* FONTS */
+    --font-main: 'DM Sans', sans-serif;
+    --font-stats: 'Cormorant Garamond', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+
+.navContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5px;
+    position: relative;
+}
+
+.navLinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    grid-column: 1 / -1;
+    transform: translateY(-10px);
+    transition: transform 0.6s, opacity 0.6s, visibility 0.3s;
+    z-index: 100;
+    padding: 20px;
+    background-color: var(--background);
+
+}
+
+.navLinks a {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text);
+    padding: 10px;
+}
+
+.navLinks.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.navlogo {
+    margin-left: 5px;
+
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.burger span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: black;
+    flex-direction: column;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.heroContainer {
+    margin-top: 20px;
+}
+
+.heroTitle {
+    margin-top: 100px;
+    font-family: var(--font-main);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.heroTitle2 {
+    color: var(--text-highlight);
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.heroParagraph {
+    margin-top: 25px;
+    width: 100%;
+    max-width: 55ch;
+    font-size: 1.5rem;
+    text-align: left;
+    line-height: 1.6;
+
+}
+
+.heroImage {
+    margin-top: 50px;
+    background-color: black;
+    min-height: 500px;
+}
+
+.achievementsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 25px;
+}
+
+.achievement {
+    text-align: center;
+    padding: 25px;
+}
+
+.achievement:last-child{
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/-1;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.heroCtas {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 25px;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
