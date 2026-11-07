@@ -80,7 +80,7 @@ img {
 .navLinks.active {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(50px);
 }
 
 .navlogo {
@@ -98,7 +98,7 @@ img {
 
 .burger span {
     display: block;
-    width: 20px;
+    width: 30px;
     height: 3px;
     border-radius: 20px;
     background-color: black;
@@ -123,7 +123,7 @@ img {
 }
 
 .heroTitle {
-    margin-top: 100px;
+    margin-top: 50px;
     font-family: var(--font-main);
     font-size: 2rem;
     font-weight: 400;
