@@ -278,7 +278,17 @@ a:focus-visible, button:focus-visible {
     min-height: 0;
     position: relative;
     aspect-ratio: 1.1;
-    border-radius: 43% 26% 38% 30% / 57% 27% 43% 30%;
+    border-radius: 0;
+    /* Rounded, slanted outline; the photo inside stays upright. */
+    clip-path: polygon(
+        43% 0%, 79% 0%, 84% 0.5%, 88.5% 2%, 92.5% 4.5%,
+        96% 8%, 98.5% 12.5%, 100% 18%, 100% 23%, 99% 29%,
+        89% 72%, 87% 79%, 84% 85%, 80% 90%, 75% 94%,
+        69% 97%, 63% 99%, 57% 100%, 28% 100%, 22% 99.5%,
+        16% 98%, 11% 95.5%, 6.5% 92%, 3% 87.5%, 1% 82%,
+        0% 76%, 0% 70%, 1% 64%, 6% 42%, 9% 31%,
+        13% 21%, 18% 13%, 23.5% 7%, 30% 3%, 36% 1%
+    );
     overflow: hidden;
 }
 
