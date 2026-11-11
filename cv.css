@@ -1,0 +1,338 @@
+:root {
+    --navy: #0b1024;
+    --text: #10121b;
+    --divider: #8597b1;
+    --paper: #ffffff;
+    --screen: #e5e8ec;
+    --font-main: Arial, Helvetica, sans-serif;
+    --text-size: 10pt;
+    --space-small: 2mm;
+    --space-medium: 4mm;
+    --space-large: 6mm;
+}
+
+/* PAGE AND SHARED STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--screen);
+    color: var(--text);
+    font-family: var(--font-main);
+    font-size: var(--text-size);
+    line-height: 1.4;
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cvPage {
+    width: 210mm;
+    height: 297mm;
+    margin: 8mm auto;
+    padding: 11mm 8mm 12mm;
+    background: var(--paper);
+    box-shadow: 0 2mm 8mm #0b14271a;
+}
+
+.iconDefinitions {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.icon {
+    width: 5mm;
+    height: 5mm;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sectionHeading {
+    color: var(--navy);
+    font-size: 17pt;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+    margin-bottom: 2mm;
+}
+
+/* NAME AND CONTACT DETAILS */
+
+.cvHeader {
+    display: grid;
+    grid-template-columns: 78mm 1fr;
+    align-items: center;
+    min-height: 16mm;
+}
+
+h1 {
+    color: var(--navy);
+    font-size: 36pt;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.rolePanel {
+    border-left: 0.3mm solid var(--navy);
+    padding: 1mm 0 1mm 7mm;
+}
+
+.rolePanel h2 {
+    color: var(--navy);
+    font-size: 15.5pt;
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+    white-space: nowrap;
+}
+
+.rolePanel p {
+    margin-top: 2mm;
+    font-size: 7.8pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.2px;
+}
+
+.rolePanel p span {
+    margin: 0 2mm;
+}
+
+.contactDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3mm;
+    padding: 6mm 0 7mm;
+    font-style: normal;
+    font-size: 10pt;
+}
+
+.contactDetails > a, .contactDetails > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 2.5mm;
+    white-space: nowrap;
+}
+
+/* PROFILE */
+
+.profilePanel {
+    border-top: 0.3mm solid var(--divider);
+    padding: 4mm 0 6mm;
+}
+
+.profilePanel p {
+    font-size: 10.3pt;
+    line-height: 1.4;
+}
+
+/* KEY SKILLS */
+
+.skillsSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6mm;
+    padding: 5mm 0;
+    border-top: 0.3mm solid var(--divider);
+    border-bottom: 0.3mm solid var(--divider);
+}
+
+.skillsSection .sectionHeading {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.skillsList, .additionalList {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.skillsList {
+    font-size: 9.5pt;
+}
+
+.skillsList li, .additionalList li {
+    white-space: nowrap;
+}
+
+.skillsList li + li, .additionalList li + li {
+    border-left: 0.25mm solid var(--navy);
+    padding-left: 3mm;
+    margin-left: 3mm;
+}
+
+/* EXPERIENCE */
+
+.experienceSection {
+    padding: 4mm 0 7mm;
+}
+
+.experienceSection > .sectionHeading {
+    margin-bottom: 3mm;
+}
+
+.jobHeading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 3mm;
+}
+
+h3 {
+    font-size: 12pt;
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+}
+
+.jobHeading > p {
+    font-size: 10.5pt;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.jobDescription {
+    margin-top: 1mm;
+}
+
+.jobPoints {
+    padding-left: 6mm;
+    margin-top: 3mm;
+}
+
+.jobPoints li {
+    padding-left: 1mm;
+    margin-top: 1mm;
+    font-size: 9.8pt;
+}
+
+.job + .job {
+    margin-top: 6mm;
+}
+
+/* TECHNICAL KNOWLEDGE AND CERTIFICATIONS */
+
+.knowledgeAndEducation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 0.3mm solid var(--divider);
+    padding: 6mm 0;
+}
+
+.technicalSection {
+    padding-right: 5mm;
+}
+
+.educationSection {
+    border-left: 0.25mm solid var(--divider);
+    padding-left: 7mm;
+}
+
+.knowledgeAndEducation .sectionHeading {
+    margin-bottom: 4mm;
+    white-space: nowrap;
+    font-size: 16.5pt;
+}
+
+.technicalList {
+    list-style: none;
+    padding: 0 0 0 1mm;
+    font-size: 9.5pt;
+}
+
+.technicalList li + li {
+    margin-top: 2mm;
+}
+
+.educationItem h3 {
+    font-size: 9.7pt;
+    letter-spacing: -0.2px;
+}
+
+.educationItem p {
+    font-size: 9.5pt;
+    margin-top: 1mm;
+}
+
+.educationItem + .educationItem {
+    margin-top: 5mm;
+}
+
+/* ADDITIONAL INFORMATION */
+
+.additionalSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4mm;
+    padding-top: 5mm;
+    border-top: 0.3mm solid var(--divider);
+}
+
+.additionalSection .sectionHeading {
+    font-size: 15pt;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.additionalList {
+    font-size: 8.4pt;
+}
+
+.additionalList li + li {
+    padding-left: 2mm;
+    margin-left: 2mm;
+}
+
+/* PRINT AT ACTUAL SIZE: A4 PORTRAIT */
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+@media print {
+    html, body {
+        width: 210mm;
+        margin: 0;
+        padding: 0;
+        background: var(--paper);
+    }
+
+    body {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .cvPage {
+        margin: 0;
+        box-shadow: none;
+    }
+
+    section, article, .cvHeader, .contactDetails {
+        break-inside: avoid;
+    }
+
+    h2, h3 {
+        break-after: avoid;
+    }
+
+}
