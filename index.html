@@ -1,78 +1,77 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brett Cooley CV</title>
+    <meta name="description" content="Brett Cooley — career profile, CooleyRunnings charity fundraising and CooleyCodeWorks web development.">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="">
 </head>
 <body>
-    <header class="heroPage">
-        <section class="navContainer">
-            <div class="navLogo">
-                <img src="" alt="Brett Cooley Logo">
-            </div>
-            <div class="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="navLinks">
+    <header class="heroPage" id="Home">
+        <section class="navContainer container">
+            <div class="navLogo"><a href="#Home">Brett Cooley</a></div>
+            <button class="burger" type="button" aria-label="Toggle navigation" aria-controls="navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="navLinks" id="navigation" aria-label="Main navigation">
                 <a href="#Home" class="navLink">Home</a>
+                <a href="#About" class="navLink">About</a>
                 <a href="#Experience" class="navLink">Experience</a>
+                <a href="#Projects" class="navLink">Projects</a>
                 <a href="#Charity" class="navLink">Charity</a>
-                <a href="#Contact" class="ctaContact">Get in touch</a>
+                <a href="#Contact" class="ctaContact">Get in Touch</a>
             </nav>
         </section>
-
-        <section class="heroContainer container">
-            <div class="heroTitles">
-                <div class="heroTitle">From Investigation 
-                </div>
-                <div class="heroTitle2"> to technology.</div>
-                <div class="heroParagraph">
-                    12+ years in the Metropolitan Police, with a focus on complex
-                    investigations and problem solving. Now applying that experience 
-                    in technology, 
-                    commercial and customer-focused roles.
-                </div>
+        <section class="heroContainer container" aria-labelledby="careerTitle">
+            <div class="heroTitles" id="About">
+                <p class="sectionLabel">Career profile</p>
+                <h1 class="heroTitle" id="careerTitle">From investigation <span class="heroTitle2">to technology.</span></h1>
+                <p class="heroParagraph">12+ years in the Metropolitan Police, with a focus on complex investigations and problem solving. Now applying that experience in technology, commercial and customer-focused roles.</p>
                 <div class="heroCtas">
-                    <div class="heroCta1">
-                        Get in Touch
-                    </div>
-                    <div class="heroCta2">
-                        Download CV
-                    </div>
+                    <a class="heroCta1" href="#Contact">Get in Touch <span aria-hidden="true">&rarr;</span></a>
+                    <!-- Replace this path with your CV PDF. -->
+                    <a class="heroCta2" href="./brett-cooley-cv.pdf" download><span aria-hidden="true">&darr;</span> Download CV</a>
                 </div>
-            <div class="heroImage"><img src="" alt="heroImage">
             </div>
-
-            <div class="achievementsContainer">
-                <div class="achievement">
-                    <h1>12+</h1>
-                    <p>YEARS IN POLICING</p>
-                </div>
-                <div class="achievement">
-                    <h1>£20K+</h1>
-                    <p>RAISED FOR CHARITY</p>
-                </div>
-                <div class="achievement">
-                    <h1>2+</h1>
-                    <p>YEARS BUILDING WEB SOLUTIONS</p>
-                </div>
+            <div class="heroImage"><img src="./images/brett-cooley-portrait.jpg" alt="Portrait of Brett Cooley"></div>
+            <div class="achievementsContainer" id="Experience" aria-label="Career achievements">
+                <div class="achievement"><h2>12+</h2><p>Years in policing</p></div>
+                <div class="achievement"><h2>&pound;20,000+</h2><p>Raised for charity</p></div>
+                <div class="achievement"><h2>2+</h2><p>Years building<br>web solutions</p></div>
             </div>
         </section>
     </header>
-
-    <section class="CharityAndWebDevPage">
-        <div class="CharityAndWebDevContainer">
-
+    <main class="CharityAndWebDevPage">
+        <div class="CharityAndWebDevContainer container">
+            <section class="charitySection" id="Charity" aria-labelledby="charityTitle">
+                <div class="charityImage"><img src="./images/cooleyrunnings-charity-run.jpg" alt="Brett running for CooleyRunnings in support of St Francis Hospice" loading="lazy"></div>
+                <div class="charityText">
+                    <p class="sectionLabel">CooleyRunnings</p>
+                    <h2 id="charityTitle">Supporting<br>St Francis Hospice.</h2>
+                    <p>Over &pound;20,000 raised through running challenges and events.</p>
+                    <!-- Replace with your charity page URL when available. -->
+                    <a class="sectionLink" href="#Contact">View Charity <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </section>
+            <section class="webDevSection" id="Projects" aria-labelledby="projectsTitle">
+                <div class="webDevText">
+                    <p class="sectionLabel">CooleyCodeWorks</p>
+                    <h2 id="projectsTitle">Web development<br>for small businesses.</h2>
+                    <p>Creating affordable, high-quality websites that help local businesses grow online.</p>
+                    <!-- Replace with your projects page URL when available. -->
+                    <a class="sectionLink" href="#Contact">View Projects <span aria-hidden="true">&rarr;</span></a>
+                </div>
+                <div class="webDevImage"><img src="./images/cooleycodeworks-website.jpg" alt="A CooleyCodeWorks small business website displayed on a laptop" loading="lazy"></div>
+            </section>
         </div>
-
-    </section>
-
-
+    </main>
+    <footer class="contactSection container" id="Contact">
+        <p class="sectionLabel">Get in touch</p>
+        <h2>Let&rsquo;s start a conversation.</h2>
+        <!-- Add your preferred email address or contact link here. -->
+        <p>Contact details coming soon.</p>
+    </footer>
     <script src="./script-js"></script>
 </body>
 </html>
