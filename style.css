@@ -315,6 +315,10 @@ a:focus-visible, button:focus-visible {
 
 /* ACHIEVEMENTS */
 
+.charityFigureShort {
+    display: none;
+}
+
 .achievementsContainer {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -452,6 +456,12 @@ a:focus-visible, button:focus-visible {
     }
 }
 @media (max-width: 480px) {
+    .charityFigureFull {
+        display: none;
+    }
+    .charityFigureShort {
+        display: inline;
+    }
     .navLogo {
         font-size: 25px;
     }
