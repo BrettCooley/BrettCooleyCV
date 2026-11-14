@@ -594,6 +594,7 @@ a:focus-visible, button:focus-visible {
     }
 
     .webDevImage {
+        order: -1;
         /* Use the full screen width for the three-laptop showcase. */
         width: calc(100% + 10vw);
         margin-left: -5vw;
