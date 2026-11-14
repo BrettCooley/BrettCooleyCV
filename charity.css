@@ -93,6 +93,10 @@
     object-position: center 85%;
 }
 
+.cricketPhoto img {
+    object-position: center 35%;
+}
+
 .charitySocials {
     display: flex;
     align-items: center;
@@ -155,7 +159,7 @@
     display: grid;
     grid-template-columns: 31% 1fr;
     align-items: center;
-    background: var(--background)
+    background: var(--background);
     border-radius: 16px;
     padding: 28px 0px;
     gap: 40px;
@@ -283,7 +287,15 @@
     .challengesPanel {
         grid-template-columns: 1fr;
         gap: 24px;
-        padding: 26px;
+        padding: 26px 0;
+        text-align: left;
+    }
+
+    .challengesList {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
     }
 
     .challengesTitle {
