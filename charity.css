@@ -1,0 +1,433 @@
+/* CHARITY PAGE VALUES */
+
+.charityPage {
+    --charity-navy: #0b1626;
+    --charity-taupe: #8a6b53;
+    --charity-purple: #80166c;
+    --hospice-orange: #e87700;
+    --charity-space: clamp(28px, 4vw, 48px);
+    color: var(--charity-navy);
+    background: #fcfaf8;
+}
+
+/* Navigation uses the shared homepage styles in style.css. */
+
+.charityPage > header {
+    color: var(--text);
+    background: var(--background);
+}
+
+/* INTRODUCTION */
+
+.charityIntro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 34px;
+    padding: var(--charity-space) 0;
+}
+
+.charityLabel {
+    font-size: 13px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+}
+
+.charityPage h1, .charityPage h2 {
+    color: var(--charity-navy);
+    font-family: var(--font-stats);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -1.4px;
+}
+
+.charityPage h1 {
+    font-size: clamp(34px, 4.6vw, 62px);
+    margin-top: 18px;
+}
+
+.charityPage h1 em {
+    color: var(--hospice-orange);
+    font-weight: 400;
+}
+
+.introParagraph {
+    font-size: clamp(17px, 1.9vw, 22px);
+    line-height: 1.35;
+    margin-top: 28px;
+    max-width: 42ch;
+}
+
+.charityPhoto {
+    overflow: hidden;
+    border-radius: 12px;
+    background: #e6e6e8;
+    min-width: 0;
+}
+
+.charityPhoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.introPhoto {
+    aspect-ratio: 1.43;
+}
+
+.introPhoto img {
+    object-position: center 5%;
+}
+
+.dinoPhoto img {
+    object-position: center top;
+}
+
+.buzzPhoto img {
+    object-position: center 20%;
+}
+
+.bottomCyclingPhoto img {
+    object-position: center 85%;
+}
+
+.charitySocials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.charitySocials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.charityIcon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.hospiceLink {
+    color: var(--charity-purple);
+    font-size: 22px;
+    line-height: 1.05;
+    font-weight: 700;
+}
+
+.hospiceLogo {
+    width: clamp(120px, 18vw, 210px);
+    height: auto;
+    object-fit: contain;
+}
+
+.instagramLink {
+    border-left: 1px solid var(--border);
+    padding-left: 20px;
+    min-height: clamp(66px, 10vw, 112px);
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.instagramLink .charityIcon {
+    color: var(--charity-purple);
+    width: clamp(52px, 6vw, 72px);
+    height: clamp(52px, 6vw, 72px);
+}
+
+.charitySocials a:hover {
+    opacity: 0.75;
+}
+
+/* CHALLENGE SUMMARY */
+
+.challengesPanel {
+    display: grid;
+    grid-template-columns: 31% 1fr;
+    align-items: center;
+    background: var(--background)
+    border-radius: 16px;
+    padding: 28px 0px;
+    gap: 40px;
+    margin-bottom: 28px;
+}
+
+.challengesTitle {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-right: 1px solid var(--charity-taupe);
+    padding-right: 24px;
+}
+
+.challengesTitle .charityIcon {
+    color: var(--charity-taupe);
+    height: 76px;
+    width: 60px;
+}
+
+.challengesTitle h2 {
+    font-size: 36px;
+}
+
+.challengesTitle .charityLabel {
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.challengesList {
+    list-style: none;
+    display: grid;
+    gap: 18px;
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+.challengesList li {
+    position: relative;
+    padding-left: 48px;
+}
+
+.challengesList li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--charity-taupe);
+    border-radius: 50%;
+    color: var(--charity-taupe);
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+}
+
+/* INDIVIDUAL CHALLENGES AND PHOTO GALLERIES */
+
+.challengeSection {
+    display: grid;
+    grid-template-columns: 0.9fr 1.4fr;
+    gap: 36px;
+    padding: 28px 0;
+}
+
+.challengeSection + .challengeSection {
+    border-top: 1px solid var(--border);
+}
+
+.challengeText h2 {
+    font-size: clamp(30px, 3.4vw, 43px);
+    margin-top: 12px;
+}
+
+.challengeText > p:last-child {
+    font-size: 18px;
+    line-height: 1.35;
+    margin-top: 18px;
+    max-width: 38ch;
+}
+
+.challengeGallery {
+    display: grid;
+    grid-template-columns: 1.75fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+    height: clamp(180px, 20vw, 260px);
+}
+
+.challengeGallery .mainPhoto {
+    grid-row: 1 / -1;
+}
+
+.challengeGallery .charityPhoto {
+    min-height: 0;
+}
+
+/* Footer uses the shared homepage contact styles in style.css. */
+
+.charityPage .contactSection h2 {
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: var(--text);
+}
+
+/* TABLETS AND PHONES */
+
+
+@media (max-width: 849px) {
+    .charityIntro {
+        grid-template-columns: 1fr;
+    }
+
+    .introPhoto {
+        max-height: 400px;
+    }
+
+    .charitySocials {
+        margin-top: 28px;
+    }
+
+    .challengesPanel {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 26px;
+    }
+
+    .challengesTitle {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+        padding: 0 0 22px;
+    }
+
+    .challengesTitle h2 br, .challengesTitle .charityLabel br {
+        display: none;
+    }
+
+    .challengeSection {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .challengeText > p:last-child {
+        max-width: 60ch;
+    }
+
+    .challengeGallery {
+        height: 240px;
+    }
+
+}
+
+@media (max-width: 480px) {
+.charityPage .charityLabel {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .charitySocials {
+        gap: 16px;
+    }
+
+    .charitySocials a {
+        gap: 8px;
+    }
+
+    .hospiceLink {
+        font-size: 18px;
+    }
+
+    .instagramLink {
+        font-size: 16px;
+        padding-left: 16px;
+    }
+
+    .charitySocials .charityIcon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .challengesTitle {
+        gap: 16px;
+    }
+
+    .challengesTitle h2 {
+        font-size: 30px;
+    }
+
+    .challengesList {
+        font-size: 16px;
+    }
+
+    .challengesList li {
+        padding-left: 38px;
+    }
+
+    .challengeGallery {
+        height: 170px;
+        gap: 8px;
+    }
+
+    .challengeText > p:last-child {
+        font-size: 17px;
+    }
+
+.involvedContent > .charityIcon {
+        width: 48px;
+        height: 48px;
+    }
+
+.getInvolved h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    .charityPage .contactSection h2 {
+        line-height: 1.3;
+        letter-spacing: -0.4px;
+    }
+}
+
+/* FOOTER NAVIGATION */
+
+.charityFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    border-top: 1px solid var(--border);
+    margin-top: 28px;
+    padding: 32px 0;
+}
+
+.footerName {
+    font-size: 24px;
+    letter-spacing: -0.5px;
+}
+
+.footerLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+}
+
+.footerLinks a {
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.footerLinks a:hover {
+    color: var(--text-highlight);
+}
+
+
+
+@media (max-width: 480px) {
+    .charityFooter {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .footerLinks {
+        gap: 12px 20px;
+    }
+}

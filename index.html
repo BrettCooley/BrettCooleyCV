@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brett Cooley CV</title>
-    <meta name="description" content="Brett Cooley — career profile, CooleyRunnings charity fundraising and CooleyCodeWorks web development.">
+    <meta name="description" content="Brett Cooley — career profile, CooleyRunnings charity fundraising and CooleyCode web development.">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -16,10 +16,8 @@
             </button>
             <nav class="navLinks" id="navigation" aria-label="Main navigation">
                 <a href="#Home" class="navLink">Home</a>
-                <a href="#About" class="navLink">About</a>
-                <a href="#Experience" class="navLink">Experience</a>
                 <a href="#Projects" class="navLink">Projects</a>
-                <a href="#Charity" class="navLink">Charity</a>
+                <a href="./charity.html" class="navLink">Charity</a>
                 <a href="#Contact" class="ctaContact">Get in Touch</a>
             </nav>
         </section>
@@ -46,13 +44,13 @@
     <main class="CharityAndWebDevPage">
         <div class="CharityAndWebDevContainer container">
             <section class="charitySection" id="Charity" aria-labelledby="charityTitle">
-                <div class="charityImage"><img src="./images/cooleyrunnings-charity-run.jpg" alt="Brett running for CooleyRunnings in support of St Francis Hospice" loading="lazy"></div>
+                <div class="charityImage"><img src="./images/hospiceimage for front.png" alt="Brett raising money for St Francis Hospice" loading="lazy"></div>
                 <div class="charityText">
                     <p class="sectionLabel">CooleyRunnings</p>
                     <h2 id="charityTitle">Supporting<br>St Francis Hospice.</h2>
-                    <p>Over &pound;20,000 raised through running challenges and events.</p>
-                    <!-- Replace with your charity page URL when available. -->
-                    <a class="sectionLink" href="#Contact">View Charity <span aria-hidden="true">&rarr;</span></a>
+                    <p>Over &pound;20,000 raised through challenges and events.</p>
+                    <!-- Read more about my fundraising journey. -->
+                    <a class="sectionLink" href="./charity.html">View Charity <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </section>
             <section class="webDevSection" id="Projects" aria-labelledby="projectsTitle">
@@ -63,15 +61,32 @@
                     <!-- Replace with your projects page URL when available. -->
                     <a class="sectionLink" href="#Contact">View Projects <span aria-hidden="true">&rarr;</span></a>
                 </div>
-                <div class="webDevImage"><img src="./images/cooleycodeworks-website.jpg" alt="A CooleyCodeWorks small business website displayed on a laptop" loading="lazy"></div>
+                <div class="webDevImage"><img src="./images/laptop-showcase-sophie.png" alt="Three laptops showcasing All About Plaster, R&amp;R by Sophie and a dog grooming website" loading="lazy" decoding="async"></div>
             </section>
         </div>
     </main>
     <footer class="contactSection container" id="Contact">
         <p class="sectionLabel">Get in touch</p>
-        <h2>Let&rsquo;s start a conversation.</h2>
-        <!-- Add your preferred email address or contact link here. -->
-        <p>Contact details coming soon.</p>
+        <h2>Please get in touch with any business opportunities.</h2>
+        <div class="contactLinks">
+            <a class="contactLink" href="mailto:brett@cooleycodeworks.co.uk">
+                <svg class="contactIcon" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="2" y="4" width="20" height="16" rx="1.5" />
+                    <path d="m3 5 9 8 9-8" />
+                </svg>
+                <span>brett.c@btinternet.com</span>
+            </a>
+            <!-- Replace this href with your LinkedIn profile URL if needed. -->
+            <a class="contactLink" href="https://www.linkedin.com/in/brettcooley/"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="contactIcon" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect class="linkedinBackground" x="1" y="1" width="22" height="22" rx="2" />
+                    <path class="linkedinMark" d="M6 10v8M11 18v-8m0 4c0-5 7-5 7 0v4" />
+                    <circle class="linkedinDot" cx="6" cy="6.5" r="1.3" />
+                </svg>
+                <span>linkedin.com/in/brettcooley</span>
+            </a>
+        </div>
     </footer>
     <script src="./script-js"></script>
 </body>

@@ -91,10 +91,6 @@ a:focus-visible, button:focus-visible {
     flex-shrink: 0;
 }
 
-.heroCta1:hover, .ctaContact:hover {
-    background: var(--text-secondary);
-}
-
 .heroImage, .charityImage, .webDevImage {
     background: #000;
 }
@@ -230,10 +226,18 @@ a:focus-visible, button:focus-visible {
     color: var(--button-text);
     border-radius: var(--button-radius);
     padding: 15px 24px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.heroCta1:hover, .navLinks .ctaContact:hover {
+    background: var(--text-secondary);
+    transform: scale(1.03);
 }
 
 .navLink:hover, .sectionLink:hover, .heroCta2:hover {
     color: var(--text-highlight);
+    transform: scale(1.03);
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 /* HERO */
@@ -386,6 +390,17 @@ a:focus-visible, button:focus-visible {
     border-radius: var(--image-radius);
 }
 
+.webDevImage {
+    background: transparent;
+    aspect-ratio: auto;
+    border-radius: 0;
+}
+
+.webDevImage img {
+    height: auto;
+    object-fit: contain;
+}
+
 .charityText > p:not(.sectionLabel), .webDevText > p:not(.sectionLabel) {
     font-size: 19px;
     line-height: 1.5;
@@ -396,8 +411,82 @@ a:focus-visible, button:focus-visible {
 /* CONTACT */
 
 .contactSection {
-    padding: 36px 0 50px;
+    padding: clamp(40px, 6vw, 76px) 0;
     border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contactSection .sectionLabel {
+    flex-direction: column;
+    gap: 16px;
+    color: var(--text-highlight);
+}
+
+.contactSection .sectionLabel::after {
+    background: var(--text-highlight);
+}
+
+.contactSection h2 {
+    font-family: var(--font-stats);
+    font-size: clamp(28px, 3.5vw, 44px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin: 26px auto 0;
+    max-width: 40ch;
+}
+
+.contactLinks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.contactLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 0;
+    max-width: 100%;
+    font-size: clamp(14px, 1.8vw, 21px);
+}
+
+.contactLink span {
+    overflow-wrap: anywhere;
+}
+
+.contactLink:hover {
+    color: var(--text-highlight);
+}
+
+.contactIcon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: var(--text-highlight);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.linkedinBackground {
+    fill: var(--text-highlight);
+    stroke: none;
+}
+
+.linkedinMark {
+    stroke: var(--background);
+    stroke-width: 2.5;
+}
+
+.linkedinDot {
+    fill: var(--background);
+    stroke: none;
 }
 
 .contactSection > p:last-child {
@@ -409,6 +498,20 @@ a:focus-visible, button:focus-visible {
 /* RESPONSIVE STYLES */
 
 @media (min-width: 850px) {
+    .contactLinks {
+        gap: 0;
+    }
+
+    .contactLink + .contactLink {
+        border-left: 1px solid var(--text-highlight);
+        margin-left: 32px;
+        padding-left: 32px;
+    }
+
+    .navLogo {
+        font-size: 40px;
+    }
+
     .burger {
         display: none;
     }
@@ -436,10 +539,7 @@ a:focus-visible, button:focus-visible {
         margin-left: 36px;
         padding: 13px 22px;
     }
-    .navLink:first-child {
-        text-decoration: underline;
-        text-underline-offset: 12px;
-    }
+    
     .heroContainer {
         grid-template-columns: 0.95fr 1.05fr;
         gap: 44px 24px;
@@ -466,6 +566,39 @@ a:focus-visible, button:focus-visible {
     }
 }
 @media (max-width: 480px) {
+    .contactSection h2 {
+        font-size: clamp(22px, 6vw, 28px);
+        line-height: 1.3;
+        letter-spacing: -0.4px;
+        text-wrap: balance;
+    }
+
+    .contactLinks {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        width: max-content;
+        max-width: 100%;
+        margin: 28px auto 0;
+        text-align: left;
+    }
+
+    .contactLink {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .contactIcon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .webDevImage {
+        /* Use the full screen width for the three-laptop showcase. */
+        width: calc(100% + 10vw);
+        margin-left: -5vw;
+    }
+
     .charityFigureFull {
         display: none;
     }
@@ -502,7 +635,7 @@ a:focus-visible, button:focus-visible {
     html {
         scroll-behavior: auto;
     }
-    .navLinks, .burger span {
+    .navLinks, .burger span, .navLinks .ctaContact, .heroCta1 {
         transition: none;
     }
 }
