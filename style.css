@@ -497,6 +497,20 @@ a:focus-visible, button:focus-visible {
 
 /* RESPONSIVE STYLES */
 
+@media (max-width: 849px) {
+    .navLinks .ctaContact {
+        background: transparent;
+        color: var(--text);
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .navLinks .ctaContact:hover {
+        background: transparent;
+        color: var(--text-highlight);
+    }
+}
+
 @media (min-width: 850px) {
     .contactLinks {
         gap: 0;

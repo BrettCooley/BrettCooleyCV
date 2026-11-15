@@ -6,6 +6,7 @@
     <title>Brett Cooley CV</title>
     <meta name="description" content="Brett Cooley — career profile, CooleyRunnings charity fundraising and CooleyCode web development.">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./scroll-reveal.css">
 </head>
 <body>
     <header class="heroPage" id="Home">
@@ -22,7 +23,7 @@
             </nav>
         </section>
         <section class="heroContainer container" aria-labelledby="careerTitle">
-            <div class="heroTitles" id="About">
+            <div class="heroTitles hidden" id="About">
                 <p class="sectionLabel">Career profile</p>
                 <h1 class="heroTitle" id="careerTitle">From investigation <span class="heroTitle2">to technology.</span></h1>
                 <p class="heroParagraph">12+ years in the Metropolitan Police, with a focus on complex investigations and problem solving. Now applying that experience in technology, commercial and customer-focused roles.</p>
@@ -32,8 +33,8 @@
                     <a class="heroCta2" href="./brett-cooley-cv.pdf" download><span aria-hidden="true">&darr;</span> Download CV</a>
                 </div>
             </div>
-            <div class="heroImage"><img src="./images/heroimageCV.webp" alt="Portrait of Brett Cooley"></div>
-            <div class="achievementsContainer" id="Experience" aria-label="Career achievements">
+            <div class="heroImage hidden"><img src="./images/heroimageCV.webp" alt="Portrait of Brett Cooley"></div>
+            <div class="achievementsContainer hidden" id="Experience" aria-label="Career achievements">
                 <div class="achievement"><h2>12+</h2><p>Years in policing</p></div>
                 <div class="achievement"><h2><span class="charityFigureFull">&pound;20,000+</span>
                     <span class="charityFigureShort">&pound;20k+</span></h2><p>Raised for charity</p></div>
@@ -43,7 +44,7 @@
     </header>
     <main class="CharityAndWebDevPage">
         <div class="CharityAndWebDevContainer container">
-            <section class="charitySection" id="Charity" aria-labelledby="charityTitle">
+            <section class="charitySection hidden" id="Charity" aria-labelledby="charityTitle">
                 <div class="charityImage"><img src="./images/cricket3.webp" alt="Brett raising money for St Francis Hospice" loading="lazy"></div>
                 <div class="charityText">
                     <p class="sectionLabel">CooleyRunnings</p>
@@ -53,7 +54,7 @@
                     <a class="sectionLink" href="./charity.html">View Charity <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </section>
-            <section class="webDevSection" id="Projects" aria-labelledby="projectsTitle">
+            <section class="webDevSection hidden" id="Projects" aria-labelledby="projectsTitle">
                 <div class="webDevText">
                     <p class="sectionLabel">CooleyCode</p>
                     <h2 id="projectsTitle">Web development<br>for small businesses.</h2>
@@ -65,7 +66,7 @@
             </section>
         </div>
     </main>
-    <footer class="contactSection container" id="Contact">
+    <footer class="contactSection container hidden" id="Contact">
         <p class="sectionLabel">Get in touch</p>
         <h2>Please get in touch with any business opportunities.</h2>
         <div class="contactLinks">
