@@ -1,0 +1,154 @@
+:root {
+    --projects-navy: #09132c;
+    --projects-blue: #0759f7;
+    --projects-space: clamp(32px, 6vw, 72px);
+}
+
+/* PAGE */
+
+.projectsPage {
+    background: #fff;
+    color: var(--projects-navy);
+}
+
+.projectsPage > header {
+    background: var(--background);
+    color: var(--text);
+}
+
+.projectsContent {
+    padding-top: var(--projects-space);
+    padding-bottom: var(--projects-space);
+}
+
+/* COOLEYCODE INTRODUCTION */
+
+.projectsIntro {
+    text-align: center;
+}
+
+.projectsLogo {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: var(--font-main);
+    font-size: clamp(32px, 6.5vw, 78px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -2px;
+}
+
+.projectsLogo img {
+    width: 100%;
+    height: auto;
+}
+
+.projectsParagraph {
+    max-width: 66ch;
+    margin: clamp(28px, 4vw, 48px) auto;
+    font-size: clamp(18px, 2.4vw, 30px);
+    line-height: 1.55;
+    text-wrap: pretty;
+}
+
+.projectsPortrait {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 16px;
+}
+
+/* MOBILE */
+
+@media (max-width: 849px) {
+    .projectsLogo {
+        max-width: min(100%, 48ch);
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .projectsParagraph {
+        max-width: 48ch;
+        text-align: left;
+        margin-left: 0;
+        margin-right: auto;
+        font-size: clamp(17px, 2.5vw, 21px);
+        line-height: 1.65;
+        margin-top: 28px;
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projectsLogo {
+        letter-spacing: -1px;
+    }
+
+    .projectsParagraph {
+        font-size: 17px;
+        line-height: 1.6;
+        margin-top: 24px;
+        margin-bottom: 28px;
+    }
+}
+
+/* SEE MORE OF MY WORK */
+
+.moreWork {
+    padding-top: clamp(36px, 5vw, 60px);
+    text-align: center;
+}
+
+.moreWork::before {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 2px;
+    margin: 0 auto 16px;
+    background: #8a513b;
+}
+
+.moreWork h2 {
+    font-family: var(--font-stats);
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+}
+
+.visitWebsite {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    margin-top: 22px;
+    padding: 16px 30px;
+    border-radius: var(--button-radius);
+    background: var(--projects-navy);
+    color: var(--button-text);
+    font-size: clamp(16px, 2vw, 20px);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.visitWebsite svg {
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.visitWebsite:hover {
+    background: var(--text-secondary);
+    transform: scale(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .visitWebsite {
+        transition: none;
+    }
+}
