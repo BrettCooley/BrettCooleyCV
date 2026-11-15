@@ -214,6 +214,10 @@ a:focus-visible, button:focus-visible {
     transform: translateY(-8px) rotate(-45deg);
 }
 
+.navLogo h1 {
+    font: inherit;
+}
+
 .navLogo, .navlogo {
     margin-left: 0;
     font-size: 28px;
