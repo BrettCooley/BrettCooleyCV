@@ -1,17 +1,10 @@
 :root {
     --navy: #0b1024;
     --text: #10121b;
-    --divider: #8597b1;
-    --paper: #ffffff;
-    --screen: #e5e8ec;
-    --font-main: Arial, Helvetica, sans-serif;
-    --text-size: 10pt;
-    --space-small: 2mm;
-    --space-medium: 4mm;
-    --space-large: 6mm;
+    --muted: #475569;
+    --divider: #b5c1d0;
+    --paper: #fff;
 }
-
-/* PAGE AND SHARED STYLES */
 
 * {
     box-sizing: border-box;
@@ -19,11 +12,9 @@
 
 body {
     margin: 0;
-    background: var(--screen);
+    background: #e5e8ec;
     color: var(--text);
-    font-family: var(--font-main);
-    font-size: var(--text-size);
-    line-height: 1.4;
+    font: 10.5pt/1.38 Arial, Helvetica, sans-serif;
 }
 
 h1, h2, h3, p, ul {
@@ -35,13 +26,46 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 .cvPage {
-    width: 210mm;
-    height: 297mm;
-    margin: 8mm auto;
-    padding: 11mm 8mm 12mm;
+    width: min(100%, 210mm);
+    margin: 6mm auto;
+    padding: 10mm;
     background: var(--paper);
     box-shadow: 0 2mm 8mm #0b14271a;
+}
+
+/* Name and contact details */
+
+h1 {
+    color: var(--navy);
+    font-size: 31pt;
+    letter-spacing: -1.2px;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.contactDetails {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5mm 4mm;
+    padding: 3.5mm 0;
+    font-size: 9.5pt;
+    font-style: normal;
+}
+
+.contactDetails > * {
+    display: inline-flex;
+    align-items: center;
+    gap: 1mm;
+}
+
+.contactDetails span {
+    overflow-wrap: anywhere;
 }
 
 .iconDefinitions {
@@ -52,8 +76,8 @@ a {
 }
 
 .icon {
-    width: 5mm;
-    height: 5mm;
+    width: 3.6mm;
+    height: 3.6mm;
     flex-shrink: 0;
     fill: none;
     stroke: currentColor;
@@ -62,278 +86,122 @@ a {
     stroke-linejoin: round;
 }
 
+/* Sections */
+
+.cvPage > section {
+    border-top: 1px solid var(--divider);
+    padding: 3mm 0;
+}
+
+.cvPage > :last-child {
+    padding-bottom: 0;
+}
+
 .sectionHeading {
+    margin-bottom: 1.4mm;
     color: var(--navy);
-    font-size: 17pt;
+    font-size: 13.5pt;
     line-height: 1.2;
-    letter-spacing: -0.6px;
-    margin-bottom: 2mm;
-}
-
-/* NAME AND CONTACT DETAILS */
-
-.cvHeader {
-    display: grid;
-    grid-template-columns: 78mm 1fr;
-    align-items: center;
-    min-height: 16mm;
-}
-
-h1 {
-    color: var(--navy);
-    font-size: 36pt;
-    letter-spacing: -1.5px;
-    line-height: 1.1;
-    white-space: nowrap;
-}
-
-.rolePanel {
-    border-left: 0.3mm solid var(--navy);
-    padding: 1mm 0 1mm 7mm;
-}
-
-.rolePanel h2 {
-    color: var(--navy);
-    font-size: 15.5pt;
-    line-height: 1.2;
-    letter-spacing: -0.7px;
-    white-space: nowrap;
-}
-
-.rolePanel p {
-    margin-top: 2mm;
-    font-size: 7.8pt;
-    font-weight: 600;
-    text-transform: uppercase;
-    white-space: nowrap;
-    letter-spacing: 0.2px;
-}
-
-.rolePanel p span {
-    margin: 0 2mm;
-}
-
-.contactDetails {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3mm;
-    padding: 6mm 0 7mm;
-    font-style: normal;
-    font-size: 10pt;
-}
-
-.contactDetails > a, .contactDetails > span {
-    display: inline-flex;
-    align-items: center;
-    gap: 2.5mm;
-    white-space: nowrap;
-}
-
-/* PROFILE */
-
-.profilePanel {
-    border-top: 0.3mm solid var(--divider);
-    padding: 4mm 0 6mm;
-}
-
-.profilePanel p {
-    font-size: 10.3pt;
-    line-height: 1.4;
-}
-
-/* KEY SKILLS */
-
-.skillsSection {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6mm;
-    padding: 5mm 0;
-    border-top: 0.3mm solid var(--divider);
-    border-bottom: 0.3mm solid var(--divider);
-}
-
-.skillsSection .sectionHeading {
-    margin: 0;
-    white-space: nowrap;
 }
 
 .skillsList, .additionalList {
     display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-}
-
-.skillsList {
+    flex-wrap: wrap;
+    gap: 1mm 5mm;
+    padding-left: 4mm;
     font-size: 9.5pt;
 }
 
-.skillsList li, .additionalList li {
-    white-space: nowrap;
-}
-
-.skillsList li + li, .additionalList li + li {
-    border-left: 0.25mm solid var(--navy);
-    padding-left: 3mm;
-    margin-left: 3mm;
-}
-
-/* EXPERIENCE */
-
-.experienceSection {
-    padding: 4mm 0 7mm;
-}
-
-.experienceSection > .sectionHeading {
-    margin-bottom: 3mm;
-}
+/* Experience */
 
 .jobHeading {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    gap: 3mm;
+    gap: 1mm 3mm;
 }
 
-h3 {
-    font-size: 12pt;
-    line-height: 1.3;
-    letter-spacing: -0.3px;
+.jobHeading h3 {
+    color: var(--navy);
+    font-size: 11.5pt;
+    line-height: 1.25;
 }
 
-.jobHeading > p {
-    font-size: 10.5pt;
+.jobHeading p {
+    font-size: 9.5pt;
     font-weight: 700;
     white-space: nowrap;
 }
 
 .jobDescription {
-    margin-top: 1mm;
+    margin-top: 0.6mm;
+    color: var(--muted);
+    font-size: 9.5pt;
 }
 
 .jobPoints {
-    padding-left: 6mm;
-    margin-top: 3mm;
+    margin-top: 1.5mm;
+    padding-left: 4mm;
 }
 
-.jobPoints li {
-    padding-left: 1mm;
-    margin-top: 1mm;
-    font-size: 9.8pt;
+.jobPoints li + li {
+    margin-top: 0.8mm;
 }
 
 .job + .job {
-    margin-top: 6mm;
+    margin-top: 3.5mm;
 }
 
-/* TECHNICAL KNOWLEDGE AND CERTIFICATIONS */
+/* Certifications and development */
 
-.knowledgeAndEducation {
+.developmentList {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-top: 0.3mm solid var(--divider);
-    padding: 6mm 0;
-}
-
-.technicalSection {
-    padding-right: 5mm;
-}
-
-.educationSection {
-    border-left: 0.25mm solid var(--divider);
-    padding-left: 7mm;
-}
-
-.knowledgeAndEducation .sectionHeading {
-    margin-bottom: 4mm;
-    white-space: nowrap;
-    font-size: 16.5pt;
-}
-
-.technicalList {
+    row-gap: 0.7mm;
     list-style: none;
-    padding: 0 0 0 1mm;
-    font-size: 9.5pt;
+    padding: 0;
+    font-size: 10pt;
 }
 
-.technicalList li + li {
-    margin-top: 2mm;
-}
-
-.educationItem h3 {
-    font-size: 9.7pt;
-    letter-spacing: -0.2px;
-}
-
-.educationItem p {
-    font-size: 9.5pt;
-    margin-top: 1mm;
-}
-
-.educationItem + .educationItem {
-    margin-top: 5mm;
-}
-
-/* ADDITIONAL INFORMATION */
-
-.additionalSection {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4mm;
-    padding-top: 5mm;
-    border-top: 0.3mm solid var(--divider);
-}
-
-.additionalSection .sectionHeading {
-    font-size: 15pt;
-    margin: 0;
-    white-space: nowrap;
-}
-
-.additionalList {
-    font-size: 8.4pt;
-}
-
-.additionalList li + li {
-    padding-left: 2mm;
-    margin-left: 2mm;
-}
-
-/* PRINT AT ACTUAL SIZE: A4 PORTRAIT */
-
-@page {
-    size: A4 portrait;
-    margin: 0;
-}
-
-@media print {
-    html, body {
-        width: 210mm;
-        margin: 0;
-        padding: 0;
-        background: var(--paper);
-    }
-
+@media screen and (max-width: 600px) {
     body {
-        print-color-adjust: exact;
-        -webkit-print-color-adjust: exact;
+        font-size: 1rem;
     }
 
     .cvPage {
         margin: 0;
+        padding: 6mm;
+    }
+
+    .jobHeading {
+        flex-direction: column;
+    }
+
+}
+
+/* A4 portrait at actual size */
+
+@page {
+    size: A4 portrait;
+    margin: 10mm;
+}
+
+@media print {
+    body {
+        background: var(--paper);
+    }
+
+    .cvPage {
+        width: auto;
+        margin: 0;
+        padding: 0;
         box-shadow: none;
     }
 
-    section, article, .cvHeader, .contactDetails {
+    .cvHeader, .contactDetails, .job, .developmentSection, .additionalSection {
         break-inside: avoid;
     }
 
     h2, h3 {
         break-after: avoid;
     }
-
 }
